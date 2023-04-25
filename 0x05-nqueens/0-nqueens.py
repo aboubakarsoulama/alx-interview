@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''N Queens Challenge'''
+'''N-Queens Interview Challenge'''
 
 import sys
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     if n < 4:
         print('N must be at least 4')
-        exit(1)
+        sys.exit(1)
 
     solutions = []
     placed_queens = []  # coordinates format [row, column]
@@ -56,11 +56,11 @@ if __name__ == '__main__':
                 for cord in placed_queens:
                     if cord[1] < n - 1:
                         r = cord[0]
-                        c = corif r == n - 1 and c == n - 1:
-                    d[1]
+                        c = cord[1]
                 for i in range(n - r):
                     placed_queens.pop()
-                placed_queens = []
+                if r == n - 1 and c == n - 1:
+                    placed_queens = []
                     stop = True
                 r -= 1
                 c += 1
